@@ -1,0 +1,14 @@
+kind: PersistentVolumeClaim
+metadata:
+  name: gitlab-var-log
+  labels:
+    app: gitlab
+    region: milton 
+  namespace: gitlab
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+apiVersion: v1

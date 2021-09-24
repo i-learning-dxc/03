@@ -1,0 +1,14 @@
+kind: PersistentVolumeClaim
+metadata:
+  name: gitlab-var-opt
+  labels:
+    app: ghost
+    region: milton 
+  namespace: gitlab
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+apiVersion: v1
